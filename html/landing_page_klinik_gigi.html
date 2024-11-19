@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Klinik Gigi</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0.5em 0;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background: aquamarine;
+    color: black;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+.nav-links li a {
+    color: black;
+}
+
+.hero {
+    background: url('img/dental-clinic.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 5em 2em;
+}
+.hero-content .btn {
+    background: #FF6F61;
+    padding: 0.5em 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+}
+.services .service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+.services .card {
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.card .price {
+    font-size: 1.2em;
+    color: #FF6F61;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+.contact input, .contact textarea, .contact button {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+.logo {
+    width: 100px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+}
+.team-members .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.social-media {
+    margin-top: 1em;
+}
+.social-media a {
+    color: white;
+    margin: 0 0.5em;
+    font-size: 1.2em;
+}
+</style>
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <img class="logo" src="img/logokg.png" alt="Logo Klinik Gigi">
+            <ul class="nav-links">
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#services">Layanan Kami</a></li>
+                <li><a href="#team">Tim Dokter</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Selamat Datang di Klinik Gigi Skyline</h1>
+            <p>Kesehatan gigi Anda, Adalah prioritas kami!</p>
+            <a href="#contact" class="btn">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>Tentang Kami</h2>
+        <p>Klinik Gigi Skyline adalah klinik modern yang menyediakan layanan kesehatan gigi berkualitas untuk Anda dan keluarga.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Layanan Kami</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Pembersihan Gigi</h3>
+                <p>Layanan profesional untuk menjaga kebersihan dan kesehatan gigi Anda.</p>
+                <p class="price">Rp 300,000</p>
+            </div>
+            <div class="card">
+                <h3>Penambalan Gigi</h3>
+                <p>Solusi tepat untuk gigi berlubang dengan teknologi modern.</p>
+                <p class="price">Rp 500,000</p>
+            </div>
+            <div class="card">
+                <h3>Ortodonti Gigi</h3>
+                <p>Perawatan untuk menyempurnakan posisi gigi Anda.</p>
+                <p class="price">Rp 5,000,000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <h2>Tim Dokter</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="img/doctor1.png" alt="Dr. A">
+                <h3>Dr. A</h3>
+                <p>Spesialis Ortodonti</p>
+            </div>
+            <div class="member">
+                <img src="img/doctor2.png" alt="Dr. B">
+                <h3>Dr. B</h3>
+                <p>Dokter Gigi Umum</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami untuk konsultasi dan janji bertemu.</p>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="message" placeholder="Pesan Anda" required></textarea>
+            <button type="submit" class="btn">Kirim</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; Asep Saepudin 2024 Landing Page Klinik Gigi. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/asep_saepudin204/profilecard/?igsh=MWFqNHlmaXVlOTExYQ==" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@asepsaepudin5383?si=RkLlAAK8t8ddrvvC" target="_blank">YouTube</a>
+        </div>
+    </footer>
+</body>
+</html>

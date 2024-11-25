@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan Berhasil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .message {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #2e8b57;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3cb371;
+        }
+    </style>
+</head>
+<body>
+    <h1>Konfirmasi Pesanan</h1>
+    <p>Tekan tombol di bawah untuk membuat pesanan.</p>
+    <button class="button" onclick="buatPesanan()">Buat Pesanan</button>
+    <div id="message" class="message" style="display: none;"></div>
+
+    <script>
+        function buatPesanan() {
+            const messageElement = document.getElementById('message');
+            messageElement.style.display = 'block';
+            messageElement.textContent = 'Pesanan Anda berhasil dibuat!';
+        }
+    </script>
+</body>
+</html>
